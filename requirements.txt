@@ -1,0 +1,9 @@
+numpy
+pandas
+pyarrow
+fastapi
+httpx
+playwright
+pydantic
+pytest
+pyyaml

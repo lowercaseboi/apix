@@ -1,0 +1,31 @@
+# Three fixed weight vectors for the APIx aggregation formula (CLAUDE.md /
+# PRD §1.9-1.11). Each vector must sum to 1.0 — weights.py asserts this on
+# load.
+#
+# horizon: an ASSUMED PRIOR, not measured data (PRD §1.11 gives these exact
+# figures directly; they are not derived from any survey or DGCA source).
+#
+# route / airline: UNSOURCED PLACEHOLDERS. The PRD specifies no numbers for
+# these two vectors, only how to source them later (DGCA city-pair passenger
+# traffic for route weights; DGCA market share or scrape-derived seat share
+# for airline weights — PRD §1.11/Appendix). Until that data is sourced,
+# both vectors are set to equal weights across the fixed scope. Replace
+# with real DGCA-sourced figures before treating the index as authoritative.
+
+horizon:
+  3: 0.20
+  7: 0.22
+  14: 0.20
+  21: 0.15
+  30: 0.12
+  45: 0.07
+  60: 0.04
+
+route:
+  DEL-BOM: 0.3333333333333333
+  DEL-BLR: 0.3333333333333333
+  BOM-BLR: 0.3333333333333333
+
+airline:
+  6E: 0.5
+  SG: 0.5
